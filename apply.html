@@ -1,0 +1,166 @@
+<!--author: Nguyen Thang
+last modified: 15/10/2024-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application - Tech Innovators</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Glassy Group Technology Logo" class="navbar-logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Job Descriptions</a></li>
+        <li><a href="apply.html">Job Application</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="enhancements.html">Enhancements</a></li>
+      </ul>
+    </nav>
+  </header>
+   <!-- Job Application Section -->
+  <section id="apply" class="application-section">
+    <div class="container">
+      <h2>Job Application</h2>
+      <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php" class="job-application-form">
+        <!-- Job Reference Number -->
+        <div class="form-group">
+          <label for="jobRef">Job Reference Number:</label>
+          <input type="text" id="jobRef" name="jobRef" maxlength="5" pattern="^[A-Za-z0-9]{5}$" placeholder="e.g., DEV01" required="required">
+        </div>
+        
+        <!-- Name Fields -->
+        <div class="form-group">
+          <label for="FirstName">First Name:</label>
+          <input type="text" id="FirstName" name="firstName" maxlength="20" pattern="^[A-Za-z]+$" placeholder="e.g., Thang" required="required">
+        </div>
+        
+        <div class="form-group">
+          <label for="LastName">Last Name:</label>
+          <input type="text" id="LastName" name="lastName" maxlength="20" pattern="^[A-Za-z]+$" placeholder="e.g., Nguyen" required="required">
+        </div>
+        
+        <!-- Date of Birth -->
+        <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required="required">
+        </div>
+        
+        <!-- Gender -->
+        <fieldset class="form-group" id="gender">
+          <legend>Gender:</legend>
+          <label><input type="radio" name="gender" value="male" required="required"/> Male</label>
+          <label><input type="radio" name="gender" value="female"/> Female</label>
+          <label><input type="radio" name="gender" value="other"/> Other</label>
+        </fieldset>
+        
+        <!-- Address Fields -->
+        <div class="form-group">
+          <label for="address">Street Address:</label>
+          <input type="text" id="address" name="address" maxlength="40" placeholder="Enter your answer" required="required">
+        </div>
+        
+        <div class="form-group">
+          <label for="suburb">Suburb/Town:</label>
+          <input type="text" id="suburb" name="suburb" maxlength="40" placeholder="Enter your answer" required="required">
+        </div>
+        
+        <!-- State Dropdown -->
+        <div class="form-group">
+          <label for="state">State:</label>
+          <select id="state" name="state" required="required">
+            <option value="" disabled selected>Select your state</option>
+            <option value="VIC">VIC</option>
+            <option value="NSW">NSW</option>
+            <option value="QLD">QLD</option>
+            <option value="NT">NT</option>
+            <option value="WA">WA</option>
+            <option value="SA">SA</option>
+            <option value="TAS">TAS</option>
+            <option value="ACT">ACT</option>
+          </select>
+        </div>
+        
+        <!-- Postcode -->
+        <div class="form-group">
+          <label for="postcode">Postcode:</label>
+          <input type="text" id="postcode" name="postcode" maxlength="4" placeholder="xxxx" pattern="\d{4}" required="required">
+        </div>
+        
+        <!-- Email Address -->
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="e.g., name@domain.com" required="required">
+        </div>
+        
+        <!-- Phone Number -->
+        <div class="form-group">
+          <label for="phone">Phone Number: (Number only)</label>
+          <input type="text" id="phone" name="phone" minlength="8" maxlength="12" placeholder="Enter your answer" pattern="^[\d]+$" required="required">
+        </div>
+        
+        <!-- Skill List -->
+        <fieldset class="form-group" id="skill-lists">
+          <legend>Skill List:</legend>
+          <label>Java <input type="checkbox"  name="Java" value="Java" checked="checked" /></label>
+          <label>C# <input type="checkbox" name="C#" value="C#" /></label>
+          <label>HTML/CSS <input type="checkbox" name="HTML/CSS" value="HTML/CSS" /></label>
+          <label>Other Skills <input type="checkbox" name="skills[]" value="otherskills" /></label>
+        </fieldset>
+
+        <!-- Other Skills (Textarea) -->
+        <div class="form-group">
+          <label for="otherskillsarea">Other skills (if any):</label><br>
+          <textarea id="otherskillsarea" name="otherskillsarea" placeholder="Enter your other skills here"></textarea>
+        </div>
+
+        <input type="submit" value="Apply" class="submit-btn"/>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <img src="images/Group_logo.png" alt="Glassy Group Technology Logo" class="footer-logo">
+    <div class="footer-info-section">
+
+      <h2>Contact Us</h2>
+      <ul class="footer-info">
+        <li>Email: <a href="mailto:104997371@student.swin.edu.au">Glassygrouptech@outlook.com</a></li>
+        <li>Phone: +1 (555) 123-4567</li>
+        <li>Address: 123 Tech Lane, Innovation City, CA 98765</li>
+        <li>Business Hours: Mon-Fri, 9 AM - 5 PM</li>
+      </ul>
+    </div>
+    
+    <div class="footer-links-section">
+      <h2>Quick Links</h2>
+      <ul class="footer-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Job Descriptions</a></li>
+        <li><a href="apply.html">Job Application</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="enhancements.html">Enhancements</a></li>
+      </ul>
+    </div>
+    <div class="footer-events-section">
+      <h2>Upcoming Events</h2>
+      <p>Assignment 1<br>
+      October 21, 2024 | Swinburne University Ho Chi Minh</p>
+    </div>
+  </div>
+
+  <div class="copy-rights">
+    <p>&copy; 2024 Glassy Group Technology | All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>

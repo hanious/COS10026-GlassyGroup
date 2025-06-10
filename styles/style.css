@@ -1,0 +1,907 @@
+/*
+filename: styles.css
+author: Pham Le Bao Tran, Nguyen Thang, Tran Vu Bao Ngoc
+created: 07/10/2024
+last modified: 15/10/2024
+description: a css file for Assignment 1 - course COS10026
+*/
+
+/* General Styles */
+* {
+  padding: 0;
+  margin: 0;
+
+}
+
+header {
+  background-color: #001f3f;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9; /* Light background */
+  color: #333; /* Dark text color */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+.container h2 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Home Section */
+.home-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.story-section {
+  text-align: center;
+  width: auto;
+  height: auto;
+}
+
+h3 {font-size: 30px;}
+
+.graph img {
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.showcase1 img {
+  max-width: 40%;
+  max-height: 40vh;
+  clear: left;
+  float: left;  
+  margin-left: 13em;
+  margin-bottom: 30px;
+}
+
+.pj1-text {
+  background-image: linear-gradient(#ffadfc, #dba8ff);
+  text-align: left;
+  float: right;
+  padding: 5.25em 4.5em 5.25em 5em; /*top right bottom left*/
+  width: 30%;
+  margin-right: 12.5em;
+  margin-bottom: 30px;
+}
+
+.showcase2 img {
+  max-width: 40%;
+  max-height: 40vh;
+  clear: right;
+  float: right;
+  margin-right: 12.5em;
+  margin-bottom: 30px;
+}
+
+.pj2-text {
+  background-image: linear-gradient(#adfcff, #add1ff);
+  text-align: left;
+  float: left;
+  padding: 5.25em 5em 5.25em 4.75em; /*top right bottom left*/
+  width: 30%;
+  margin-left: 12.5em;
+  margin-bottom: 30px;
+}
+
+/* Navigation Bar Styles */
+.header-index {
+  position: relative; /* Allow positioning for the nav bar */
+}
+
+/* General Navbar Styling */
+.navbar {
+  background-color: rgba(0, 31, 63, 0.7); /* Transparent navy blue */
+  color: #fff;
+  padding: 10px 20px; /* Reduced padding for smaller height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-logo {
+  width: 120px; /* Set the logo size */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* Text color */
+  font-size: 22px; /* Set font size to 20px */
+  font-weight: 500;
+  position: relative; /* Required for the ::after pseudo-element */
+  padding-bottom: 5px; /* Space for the underline */
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #6cd6df; /* Color of the underline */
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out; /* Smooth transition for the underline */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Expand the underline on hover */
+}
+
+/* Job Description Section */
+/* Job Description Title */
+.jd-header-index {
+  background-image: url(images/JD_BG.jpeg);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.jd-title h1 {
+  text-align: left;
+  border:#333;
+  font: normal bold 30px Helvetica, Arial, sans-serif;
+  color:white;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  padding-left: 20px;
+}
+
+/* Available Jobs Section */
+.jobs-section h2 {
+  font: normal bold 30px Helvetica, Arial, sans-serif;
+}
+
+.jobs-section {
+  padding: 30px;
+}
+
+/* Benefits Section */
+aside {
+  width: 25em;
+  float: right;
+  border: 4px solid darkblue; /* Dark blue border */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px 20px; /* Margin above and below */
+  padding: 30px; /* Inner padding */
+  background-color: #ffffff; /* White background */
+  text-align: center; /* Center text */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+aside h2 {
+  margin-bottom: 10px; /* Space below heading */
+  color: #0056b3; /* Navy color */
+  font: normal bold 30px Helvetica, Arial, sans-serif;
+}
+
+/* Descriptions Section*/
+.desc-section {
+  margin: 10px; /* Margin around the section */
+}
+
+/* Job Boxes */
+.job1, .job2 {
+  width: 48%; /* Nearly half width for each job box */
+  margin: 20px; /* Margin around each job box */
+  padding: 20px; /* Inner padding */
+  border: 1px solid #ddd; /* Border around job box */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Job Images Positioning */
+.job-image1 {
+  clear: right;
+  float: right;
+  display: flex; /* Maintain aspect ratio */
+  align-items: center;
+  max-width: 100%;
+  max-height: 100vh;
+  width: 38em;
+  padding-right: 50px;
+}
+
+.job-image2 {
+  clear: left;
+  float: left;
+  max-width: 100%;
+  max-height: 100vh;
+  width: 41em;
+  margin-top: 40px;
+}
+.job1 {
+  float: left; /* Job 1 floats left */
+}
+
+.job2 {
+  float: right; /* Job 2 floats right */
+}
+
+/* Clear floats after job boxes */
+.desc-section::after {
+  content: ""; /* Necessary for clearing floats */
+  display: table; /* Creates a block formatting context */
+  clear: both; /* Clear floats */
+}
+
+/* Responsibilities and Skills */
+.required-skills {
+  border: 1px solid #0056b3; /* Navy border */
+  padding: 20px; /* Inner padding */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 10px; /* Space above */
+}
+
+/* Job Application Section */
+.application-section {
+  background: url('images/Apply_BG.jpg');
+  background-size: cover;
+  background-position: center;
+  font-size: 20px;
+  padding: 90px 0;
+  background-color: #f1f1f1; /* Light gray background */
+  color: #ddd;
+}
+
+.job-application-form {
+  background-color: #fff; /* White background for the form */
+  padding: 40px;
+  padding-right: 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(36, 47, 70, 0.9);
+  border-radius: 8px; /* Rounded corners */
+  max-width: 700px; /* Max width for form */
+  margin: auto; /* Center the form */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Space between form groups */
+}
+
+label {
+  display: block; /* Block display for labels */
+  margin-bottom: 5px; /* Space below labels */
+ 
+}
+
+input,
+select,
+textarea {
+  width: 100%; /* Full width inputs */
+  padding: 10px; /* Padding for inputs */
+  font-size: 1rem; /* Font size */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+input[type="radio"] {
+  width: auto; /* Ensure radio buttons are not stretched */
+  margin-right: 10px; /* Space between radio button and label */
+}
+
+.submit-btn {
+  padding: 10px 20px; /* Button padding */
+  background-color: #001f3f; /* Navy Blue */
+  color: #fff; /* White text */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  border-radius: 5px; /* Rounded button */
+}
+
+.submit-btn:hover {
+   /* Lighter blue on hover */
+  border: 1px solid #54a0ff;
+}
+
+/* Gender and Skills Fieldset Styles */
+fieldset {
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding inside fieldset */
+}
+
+fieldset.legend {
+  margin-bottom: 10px; /* Space below legend */
+}
+
+.form-group legend {
+  margin-bottom: 10px; /* Space below legend */
+}
+
+/* Quote Section Styles */
+.quote-section {
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-top: 2px solid #4d79ff; /* Optional top border */
+  border-bottom: 2px solid #4d79ff; /* Optional bottom border */
+  position: relative;
+  overflow: hidden;
+  height: 100px; /* Initial collapsed height */
+  transition: height 0.5s ease; /* Smooth transition for height */
+  cursor: pointer; /* Change cursor to indicate interaction */
+  background-image: url('images/quotes.jpg'); /* Optional: Background image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the background */
+}
+
+.quote-section blockquote, .quote-section cite {
+  font-style: italic;
+  color: #aba8a8;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+}
+
+.quote-section:hover {
+  height: 250px; /* Expands the section on hover */
+}
+
+.quote-section:hover blockquote, .quote-section:hover cite {
+  opacity: 1; /* Become visible on hover */
+  transform: translateY(0); /* Slide into place */
+}
+
+.hidden-quote {
+  font-size: 28px;
+  max-width: 800px;
+  margin: 0 auto;
+  transform: translateY(-10px); /* Slide up initially */
+}
+
+.quote-section cite {
+  font-size: 18px;
+  font-weight: bold;
+  color: #bcbcbd;
+  display: block;
+  margin-top: 15px;
+}
+
+/* Add large quotation marks for style */
+.quote-section blockquote::before {
+  content: open-quote;
+  font-size: 40px;
+  color:#aaadaf;
+  position: relative;
+  top: 10px;
+  left: -10px;
+}
+
+.quote-section blockquote::after {
+  content: close-quote;
+  font-size: 40px;
+  color: #001f3f;
+  position: relative;
+  top: 10px;
+  right: -10px;
+}
+
+/* Group Details Section */
+.group-details-section {
+  padding: 50px;
+}
+
+.group-container {
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 100px;
+  padding-top: 30px;
+}
+
+.group-info {
+  padding: 10px;
+  padding-top: 60px;
+  margin-left: 90px;
+}
+
+.group-info dl {
+  float: left;
+}
+
+.group-photo {
+  width: 450px; /* Set width for group photo */
+  border-radius: 10px; /* Rounded corners */
+  float: right;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  border: 2px solid #000; /* Change the color as needed */
+  height: auto;
+}
+
+/* Team Member Details - Hidden by Default */
+.team-detail {
+  display: none; /* Initially hide all team details */
+  padding: 50px;
+  padding-left: 80px;
+  background-color: #fff; /* White background for details */
+  border-radius: 10px; /* Rounded corners */
+  margin: auto;
+  max-width: 700px;
+  text-align: left; /* Align text to the left */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-detail h4 {
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+  margin: 10px;
+  margin-bottom: 40px;
+}
+
+.team-detail p {
+  text-align: left;
+  font-size: 20px;
+}
+ 
+.team-detail h2 {
+  text-align: center;
+  color: #092646;
+}
+
+/* General styling for the definition list */
+dl {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+dt {
+  font-weight: bold;
+  width: 80%;
+  color: #333;
+
+}
+
+dd {
+  margin-left: 20px;
+  color: #555;
+}
+
+dl, dt, dd {
+  font-size: 18px;
+}
+
+/* Styling for individual team details */
+.team-detail dl {
+  display: grid;
+  grid-template-columns: 150px auto;
+  gap: 10px;
+}
+
+.team-detail dt {
+  color: #3878bd;
+  font-size: 1.1em;
+}
+
+.team-detail dd {
+  color: #333;
+  font-size: 1em;
+  margin: 0;
+}
+
+/* Optional: Add a line under each pair of dt and dd */
+.team-detail dt {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 5px;
+}
+
+.team-detail dd {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 5px;
+}
+
+/* Show details when clicked */
+#team1:target,
+#team2:target,
+#team3:target {
+  display: block; /* Show specific team detail when targeted */
+}
+
+/* Team Section Styles */
+.team-section {
+  text-align: center; /* Center section title */
+  padding: 50px 0;
+  background-color: #e9ecef; /* Light gray background */
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 20px;
+  padding-top: 30px;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.team-card {
+  background-color: #fff; /* White background for team cards */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 280px; /* Set max width for cards */
+  text-align: center; /* Center text in cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-photo {
+  width: 150px; /* Set width for team photos */
+  height: 150px; /* Set height for team photos */
+  border-radius: 50%; /* Circular photo for team members */
+  margin-bottom: 15px;
+  object-fit: cover; /* Cover to maintain aspect ratio */
+}
+
+/* Timetable Section Styles */
+.timetable-section {
+  padding: 60px 0;
+  background-color: #f1f1f1; /* Light gray background */
+  text-align: center;
+}
+
+.timetable-section table {
+  margin: 0 auto;
+  width: 90%; /* Set table width */
+  border-collapse: collapse; /* Remove double borders */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  background-color: #6d95c0;
+  font-size: 20px; /* Set font size for table */
+}
+
+.timetable-section h2 {
+  padding-bottom: 40px;
+}
+
+th, td {
+  padding: 12px; /* Padding for table cells */
+  border: 1px solid #ddd; /* Light gray border for cells */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth background color and text color change */
+}
+
+/* Initial cell colors */
+td {
+  background-color: #cbdceb; /* Default white background for table cells */
+  color: #666; /* Slightly darker text */
+}
+
+th {
+  font-weight: bold;
+}
+
+/* Busy cell hover gradient - Orange */
+td.busy:hover {
+  background: linear-gradient(to right, #ffe6cc, #ff9966); /* Lighter orange gradient on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* Free cell hover gradient - Blue */
+td.free:hover {
+  background: linear-gradient(to right, #cce6ff, #80b3ff); /* Lighter blue gradient on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* Hover effect for table rows */
+tr:hover td {
+  background: #e0e0e0; /* Slight gray on hover for all other cells */
+  color: #000; /* Black text on hover */
+}
+
+/* Optional: Add a hover effect for the table headers */
+th:hover {
+  background: linear-gradient(to right, #cce6ff, #80b3ff); /* Lighter gradient for header on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* Back to Team Link Style */
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.back-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Accessibility Improvements */
+a {
+  transition: color 0.3s; /* Smooth transition for links */
+}
+
+a:focus,
+a:hover {
+  color: #0056b3; /* Lighter blue for focus and hover state */
+}
+
+#gender {
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+#skill-lists {
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.header-index {
+  background-image: url(images/BG_Graphics.jpeg);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.title h2 {
+  text-align: left;
+  border:#333;
+  font-size: 30px;
+  font-weight: bold;
+  color:white;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  padding-left: 20px;
+}
+
+#apply h2 {
+  color: #001f3f;
+}
+
+/*Footer Duplicates*/
+footer {
+  background-color: #001f3f; /* Dark background for footer */
+  color: #fff; /* White text */
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Make sure items don't overflow */
+  clear: both;
+}
+.footer-container {
+  overflow: hidden; /* Clear floats for footer */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between sections */
+  align-items: flex-start; /* Align items at the start */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin-bottom: 20px; /* Space below the container */
+}
+
+.footer-info-section h2,
+.footer-links-section h2,
+.footer-events-section h2 {
+  margin-bottom: 10px; /* Space below headings */
+}
+
+.footer-info-section,
+.footer-links-section,
+.footer-events-section {
+  flex: 2; /* Equal flex for each section */
+  margin-right: 20px; /* Right margin for spacing */
+  text-align: left;
+  margin-top: 60px;
+}
+
+.footer-info-section,
+.footer-links-section,
+.footer-events-section li {
+  line-height: 30px;
+}
+
+.footer-logo {
+  height: 300px; /* Adjust as needed */
+}
+
+.footer-nav-links li a {
+  color: #fff; /* White text */
+  text-decoration: none;
+  display: block; /* Ensures each link is on a new line */
+  transition: background-color 0.3s ease;
+  padding: 10px;
+  margin-left: 30px;
+}
+
+.footer-nav-links li a:hover {
+  background-color: #0056b3; /* Lighter blue */
+}
+
+.footer-info {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.footer-nav-links {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Align items in a row */
+  flex-direction: column; /* Vertical links */
+  align-items: flex-start; /* Align links to the left */
+}
+
+.footer-nav-links li {
+  margin-bottom: 5px; /* Space between links */
+  margin-left: 10px;
+}
+
+.footer-navbar {
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  margin-right: 200px;
+  margin-top: 20px;
+}
+
+.copy-rights {
+  text-align: center;
+  width: 100%; /* Ensure it takes full width */
+}
+.copy-rights p {
+  font-size: 15px;
+}
+
+.info-section {
+  margin-top: 20px;
+  float: left;
+  
+}
+
+.info {
+  margin-left: 50px;
+}
+
+.info li {
+  padding: 10px;
+}
+
+.navbar-logo {
+  width: 400px;
+  height: 110px;
+}
+.benefits {
+  margin-right: 50px;
+}
+.benefits ol {
+  text-align: left;
+}
+
+.open-positions {
+  margin-left: 200px;
+}
+
+input::placeholder, textarea::placeholder {
+    font-family: 'Poppins', sans-serif;
+}
+
+.en-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Style each enhancement box */
+.en1, .en2 {
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border: 1px solid #ddd; /* Border around the job box */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin: 10px 0;
+  word-wrap: break-word; /* Ensure text wraps properly */
+  overflow: hidden; /* Ensure content stays inside the box */
+}
+
+.en1 {
+  float: left;
+  width: 45%; /* Control width */
+}
+
+.en2 {
+  float: right;
+  width: 45%; /* Control width */
+}
+
+/* Image styling */
+.code-image1, .code-image2, .code-image3, .code-image4, .code-image5a, .code-image5b {
+  width: 40%; /* Control the width of images */
+  height: auto; /* Maintain the aspect ratio */
+  display: inline-block; /* Ensure images stay inline */
+  margin-right: 20px;
+}
+
+/* Clear floats */
+.enhan1, .enhan2, .enhan3, .enhan4, .enhan5 {
+  clear: both; /* Make sure sections are cleared of floating elements */
+  margin-bottom: 30px;
+  padding: 5px;
+  border: 4px solid rgba(0, 31, 63, 0.7);
+}
+
+.enhan2 {
+  padding-bottom: 35px;
+}
+
+.enhan3 {
+  padding-bottom: 15px;
+}
+
+.enhan5 {
+  padding-bottom: 200px;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  .en1, .en2 {
+    float: none;
+    width: 100%; /* Full width on small screens */
+    margin: 10px 0;
+  }
+
+  .code-image1, .code-image2, .code-image3, .code-image4, .code-image5a, .code-image5b {
+    width: 100%; /* Full width for images on small screens */
+    margin: 0 0 10px 0; /* Adjust margins */
+  }
+}
+
+.code-image5a {
+  clear:left;
+  float: right;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack the navbar vertically */
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px 20px;
+  }
+}
+/*end*/
